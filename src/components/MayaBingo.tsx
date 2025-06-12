@@ -143,6 +143,7 @@ const SimpleBingoCell = ({
                           transform: 'scale(1.0)',
                           objectPosition: '50% 50%',
                           transformOrigin: 'center',
+                          imageRendering: 'crisp-edges'
                         }}
                       />
                     ) : (
@@ -201,7 +202,7 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
     { emoji: "🐨", name: "Ileana Medina Moreno", image_url: "/caritas/Ile.jpeg" },
     { emoji: "🐼", name: "Marco Antonio Barraza Mendoza", image_url: "/caritas/Marco Antonio Barraza Mendoza.jpeg" },
     { emoji: "🐸", name: "Jose Fausto Castorena", image_url: "/caritas/Jose Fausto Castorena.jpg" },
-    { emoji: "🦋", name: "Maria Geraldine Hernandez Gonzalez", image_url: "/caritas/Maria Geraldine Hernandez Gonzalez.jpg" },
+    { emoji: "🦋", name: "Maria Geraldine Hernandez Gonzalez", image_url: "/caritas/Gerald.jpeg" },
     { emoji: "🐝", name: "Manuela Zapata Tamayo", image_url: "/caritas/Manuela Zapata Tamayo.png" },
     { emoji: "🌺", name: "Karla Cristina Marin Gil", image_url: "/caritas/Karla Cristina Marin Gil.jpg" },
     { emoji: "🌻", name: "Catherine Zuluaga Alcaraz", image_url: "/caritas/Catherine Zuluaga Alcaraz.jpg" },
@@ -212,10 +213,13 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
     { emoji: "🦜", name: "Rosa Elena Velarde Soto", image_url: "/caritas/Rosita.jpeg" },
     { emoji: "🌊", name: "Samantha Eugenia Acosta Santana", image_url: "/caritas/Sam.jpeg" },
     { emoji: "🔥", name: "Dayra Aylin Gamiño Ponce", image_url: "/caritas/Dayra.jpeg" },
-    { emoji: "🌈", name: "Paola Moreno", image_url: "/caritas/paola.jpeg" },
+    { emoji: "🌈", name: "Paola Moreno", image_url: "/caritas/paolaa.jpeg" },
     { emoji: "🎨", name: "Alondra Elideth Ibarra Cortes", image_url: "/caritas/Alondra Elideth Ibarra Cortes.jpg" },
     { emoji: "🎭", name: "Angel Abad Cardenas Garcia", image_url: "/caritas/Angel Abad Cardenas Garcia.jpg" },
-    { emoji: "🎪", name: "Angelica Lopez Ley", image_url: "/caritas/Angi L.jpeg" }
+    { emoji: "🎪", name: "Angelica Lopez Ley", image_url: "/caritas/Angi L.jpeg" },
+    { emoji: "🎯", name: "Mercedes", image_url: "/caritas/Meche.jpeg" },
+    { emoji: "💎", name: "Joyita", image_url: "/caritas/Joyita.jpeg" },
+    { emoji: "🎸", name: "Jonatan", image_url: "/caritas/Jona.jpeg" }
   ];
 
   // Filtrar emojis basado en el source
@@ -275,7 +279,7 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
       "🐨": "/caritas/Ile.jpeg",
       "🐼": "/caritas/Marco Antonio Barraza Mendoza.jpeg",
       "🐸": "/caritas/Jose Fausto Castorena.jpg",
-      "🦋": "/caritas/Maria Geraldine Hernandez Gonzalez.jpg",
+      "🦋": "/caritas/Gerald.jpeg",
       "🐝": "/caritas/Manuela Zapata Tamayo.png",
       "🌺": "/caritas/Karla Cristina Marin Gil.jpg",
       "🌻": "/caritas/Catherine Zuluaga Alcaraz.jpg",
@@ -286,10 +290,13 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
       "🦜": "/caritas/Rosita.jpeg",
       "🌊": "/caritas/Sam.jpeg",
       "🔥": "/caritas/Dayra.jpeg",
-      "🌈": "/caritas/paola.jpeg",
+      "🌈": "/caritas/paolaa.jpeg",
       "🎨": "/caritas/Alondra Elideth Ibarra Cortes.jpg",
       "🎭": "/caritas/Angel Abad Cardenas Garcia.jpg",
-      "🎪": "/caritas/Angi L.jpeg"
+      "🎪": "/caritas/Angi L.jpeg",
+      "🎯": "/caritas/Meche.jpeg",
+      "💎": "/caritas/Joyita.jpeg",
+      "🎸": "/caritas/Jona.jpeg"
     };
     return emojiImageMap[emoji];
   };
@@ -603,6 +610,7 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
                         transform: 'scale(1.0)',
                         objectPosition: '50% 50%',
                         transformOrigin: 'center',
+                        imageRendering: 'crisp-edges'
                       }}
                     />
                   </div>
@@ -811,10 +819,10 @@ const MayaBingo = ({ username, userId, user, source = 'bingo' }: {
                         • Máximo 3 caritas por casilla
                       </p>
                       <p className="text-sm text-amber-200">
-                        • Puedes usar la misma carita en diferentes casillas
+                        
                       </p>
                       <p className="text-sm text-amber-200">
-                        • No puedes repetir la misma carita dentro de una casilla
+                        
                       </p>
                       <p className="text-sm text-amber-200">
                         • Arrastra y suelta para asignar
